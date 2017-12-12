@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "UTF-8">
+    <title>Maxi van</title>
+    <link rel = "stylesheet"
+   type = "text/css"
+   href = "StyleSheet_Navbar.css" />
+    <link rel="stylesheet"
+          type = "text/css"
+          href = "FooterCss.css"
+          />    
+        
+    </head>
+    
+    
+    
+    <body>
+  
+    <style>
+     
+         *{
+            margin: 0px;
+            padding-top: 0px;
+             font-family: sans-serif;
+        }
+        #Background{
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            position:absolute;
+            
+            
+        }
+        
+        #Page_Container{
+            height: 100vh;
+            width: 100vw;
+            background-image:url("DailyCat_12306OKSX_BIANCO.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+        
+        
+       
+            
+        input[type=text],select{
+            width: 80%;
+            height: 50px;
+            border-radius: 10px;
+            -webkit-box-shadow: 0px 5px 98px 17px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0px 5px 98px 17px rgba(0,0,0,0.75);
+            box-shadow: 0px 5px 98px 17px rgba(0,0,0,0.75);
+             
+        }
+        input[type=email]{
+               width: 80%;
+            height: 50px;
+            border-radius: 10px;
+            -webkit-box-shadow: 0px 5px 98px 17px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0px 5px 98px 17px rgba(0,0,0,0.75);
+            box-shadow: 0px 5px 98px 17px rgba(0,0,0,0.75);
+              
+        }
+        
+        input[type=number]{
+               width: 80%;
+            height: 50px;
+            border-radius: 10px;
+            -webkit-box-shadow: 0px 5px 98px 17px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0px 5px 98px 17px rgba(0,0,0,0.75);
+            box-shadow: 0px 5px 98px 17px rgba(0,0,0,0.75);
+              
+        }
+        input[type= button]{
+            width: 80%;
+            height: 50px;
+            align-self: center;
+            
+        }
+        label{
+            display: block;
+            font-size: 20px;
+            margin:auto;
+            text-align:center;
+            
+        }
+        .other_ticked{
+            margin: auto;
+            padding: 20px;
+            display: none;
+
+           
+
+        }
+        
+        /*error handling*/
+        .error{
+            color: red;
+            font-weight: 800;
+            display: none;
+        }
+        .quota{
+           margin: auto;
+            padding: 10px;
+            display: none;
+	    width:60%;
+        }
+        
+        .label{
+            display: none;
+	    padding : 15px;
+	    		
+        }
+        
+        #Animation_Start{
+            display: block;
+            margin: auto;
+            
+        }
+        #forum{
+          width: 80%; 
+            margin:auto;
+        }
+        
+       
+        .arrow{
+            display: inline-block;
+            
+        }
+
+        #banner{
+            text-align:center;
+            padding: 15px;
+        }
+
+      
+   
+        </style>
+        
+       
+    <div id="Page_Container">
+          <ul id="navbar">
+              <li class="Number"><img src="phone_logo.png" width="30px" height="30px" style="padding-right: 5px">087-921-8990</li> 
+              <li class="picture"><a href="#"><img src="logio.png" width="50px" height="50px"></a></li>          
+              <li class="active"><a  href="#">Home</a></li>
+              <li class="unactive"><a href="#">News</a></li>
+              <li class="unactive"><a href="#">Contact</a></li>
+              <li class="unactive"><a  href="About.html">About</a></li>  
+            </ul>
+          <h1 id="Header" style="text-align:center">Fully insured professional Irish company</h1>
+        <br>
+        <br>
+        <h2  id="banner">If you would like to get a quote fill out forum below and you will be replied to shortly</h2>
+	       
+	 <label class="label">Enter First and Second Name</label>
+         <label class="label">Enter a phone number</label>
+         <label id="label_for_other" class="other_ticked"  >Other selected please specify below</label>
+	 <label class="label">Select One of the following</label>
+ 	 <label class="label">Enter Email</label>
+
+     <form id="forum" style="text-align:center" >
+        <img class="arrow" src="left-arrow.jpg" width="30px" height="30px" onclick="CheckSlide_BackWards()">
+        <input  id="start" type="button" onclick="StartAnimation()" value="Get Your Quota Now!" >
+        <input  class="quota" id="names" type="text"  placeholder="First and Second Name" onkeydown="Check_Name(event)">
+        <input class="quota" id="email" type="email" placeholder="Email" onkeydown="Check_Email(event)"> 
+        <input class="quota" id="phone" type="number" placeholder="number" onkeydown="Check_Phone(event)">
+         <select class="quota" id="options" onchange="Check_Options()">
+            <option  value="House Move">House Move</option>
+            <option value="Commerical Move">Commerical Move</option>
+            <option value="Other">Other</option>
+        </select>   
+                 <img class="arrow" src="right-arrow.jpg" width="30px" height="30px" onclick="CheckSlide_Foward()">
+
+         <textarea id="textarea_for_other" class="other_ticked"  rows="4" cols="50" placeholder="Specify type of work needed"
+          onkeydown="next_forum(event)" ></textarea>
+        
+         <input type="button" class="quota" value="submit" id="submit" onclick="Submit_check()">
+                
+        </form>
+            
+        
+        <div id="error Handling" style="text-align: center">
+            <h3 class="error" id="Name_error">*Name may not contain Numbers</h3>
+            <h3 class="error" id="Email_error">*please enter a vaild email</h3>
+            <h3 class="error" id="Number_error">*please enter a phone number</h3>
+            
+            
+        </div>
+        
+       
+        </div>
+        
+        <footer>
+        <ol id="Footer_Our_Services" class="Footer">
+            <li><a href="#">Our Services</a></li>
+            <li><a href="#">Home Moving</a></li>
+            <li><a href="#">Delivery Commerical Goods</a></li>
+            <li><a href="#">Wherehouse Delivery</a></li>            
+            </ol>
+            
+            <ol id="Footer_List_Customers" class="Footer">
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Post A job</a></li>
+            <li><a href="#">How does it work?</a></li>
+            <li><a href="#">FAQs</a></li>
+            </ol>
+        
+            <ol id="Footer_List_Arcoss" class="Footer">
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of use</a></li>
+            <li><a href="#">Sitemap</a></li>    
+            </ol>
+            
+            <p id="copy_Rights">Copyright 2009 - 2017 MaxiVan Ltd. All right reserved.</p>
+        </footer>
+        <script src="javascript.js"></script>
+
+
+ 
+
+    </body>
+</html>

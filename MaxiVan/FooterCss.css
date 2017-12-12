@@ -1,0 +1,61 @@
+
+Footer{
+    border-top: 5px black solid;
+    border-left: 10px black solid;
+    display: flex;
+   justify-content: space-between;
+}
+
+#Footer_Our_Services{
+   
+    padding: 10px;
+    list-style-type: none;
+    font-weight: 700;
+   align-self: flex-end;
+    
+}
+#Footer_Our_Services li{
+     padding: 10px;
+}
+
+#Footer_List_Customers{
+    padding: 10px;
+    list-style-type: none;
+    font-weight: 700;
+    
+   
+}
+#Footer_List_Customers li{
+     padding: 10px;
+}
+
+#Footer_List_Arcoss{
+    padding: 10px;
+    list-style-type: none;
+    font-weight: 700;
+   
+}
+
+#Footer_List_Arcoss{
+    align-self: center;
+    display: flex;
+   
+}
+
+#Footer_List_Arcoss li{
+  flex-flow: wrap;
+    padding: 20px;
+    
+    
+}
+
+Footer li a{
+    text-decoration: none;
+    
+}
+#copy_Rights{
+   font-size: .8em;
+    flex: 0.5;
+    align-self: flex-end;
+}
+

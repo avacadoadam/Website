@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "UTF-8">
+    <title>Maxi van</title>
+    <link rel = "stylesheet"
+   type = "text/css"
+   href = "StyleSheet_Navbar.css" />
+    </head>
+    
+    
+    
+    <body>
+  
+    <style>
+     
+        
+        #Background{
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            position:absolute;
+            
+            
+        }
+        
+        #Page_Container{
+            height: 100vh;
+            width: 100vw;
+            background-image:url("DailyCat_12306OKSX_BIANCO.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+        
+        
+       
+            
+        input[type=text],select{
+            width: 80%;
+            height: 50px;
+            border-radius: 10px;
+            -webkit-box-shadow: 0px 5px 98px 17px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0px 5px 98px 17px rgba(0,0,0,0.75);
+            box-shadow: 0px 5px 98px 17px rgba(0,0,0,0.75);
+             
+        }
+        input[type=email]{
+               width: 80%;
+            height: 50px;
+            border-radius: 10px;
+            -webkit-box-shadow: 0px 5px 98px 17px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0px 5px 98px 17px rgba(0,0,0,0.75);
+            box-shadow: 0px 5px 98px 17px rgba(0,0,0,0.75);
+              
+        }
+        
+        input[type=number]{
+               width: 80%;
+            height: 50px;
+            border-radius: 10px;
+            -webkit-box-shadow: 0px 5px 98px 17px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0px 5px 98px 17px rgba(0,0,0,0.75);
+            box-shadow: 0px 5px 98px 17px rgba(0,0,0,0.75);
+              
+        }
+        input[type= button]{
+            width: 80%;
+            height: 50px;
+            align-self: center;
+            
+        }
+        label{
+            display: block;
+            font-size: 20px;
+            
+        }
+        .Forum_Container{
+           display: flex;
+        }
+
+        .other_ticked{
+            display: none;
+        }
+        
+        /*error handling*/
+        .error{
+            color: red;
+            font-weight: 800;
+            display: none;
+        }
+        .quota{
+           margin: auto;
+            padding: 10px;
+            display: none;
+        }
+        
+        .label{
+            display: none;
+        }
+        
+        #Animation_Start{
+            display: block;
+            margin: auto;
+            
+        }
+        </style>
+        
+       
+    <div id="Page_Container">
+          <ul id="navbar">
+               <li class="Number">087-921-8990</li> 
+  <li class="picture"><img src="logio.png" width="50px" height="50px"></li>            
+  <li class="active"><a  href="#">Home</a></li>
+  <li class="unactive"><a href="#">News</a></li>
+  <li class="unactive"><a href="#">Contact</a></li>
+  <li class="unactive"><a  href="About.html">About</a></li>
+                 
+            </ul>
+          <h1 id="Header" style="text-align:center">Fully insured professional Irish company</h1>
+        <br>
+        <br>
+        <h2 style="text-align:center">If you would like to get a quote fill out forum below and you will be replied to shortly</h2>
+       <div id="Forum_Container">
+     <form id="forum" style="text-align:center" >
+          <label id="enter_quote">Get Your Quota Now!</label>
+          <input  id="start" type="button" onclick="StartAnimation()">
+        
+         <label class="label" >Enter First and Second Name</label>
+        <input  class="quota" id="names" type="text"placeholder="First and Second Name" onkeydown="next_forum(event)">
+        
+         <label class="label">Enter Email</label>
+        <input class="quota" id="email" type="email" placeholder="Email" onkeydown="next_forum(event)">
+        
+         <label class="label">Enter a phone number</label>
+        <input class="quota" id="phone" type="number" placeholder="number" onkeydown="next_forum(event)">
+         <label class="label">Select One of the following</label>
+       
+         <select class="quota" id="options" onchange="Check()">
+            <option value="House Move">House Move</option>
+            <option value="Commerical Move">Commerical Move</option>
+            <option value="Other">Other</option>
+        </select>   
+         <label id="label_for_other" class="other_ticked"  >Other selected please specify below</label>
+        
+         <textarea id="textarea_for_other" class="other_ticked"  rows="4" cols="50" placeholder="Specify type of work needed"></textarea>
+        
+         <input type="button" class="quota" name="submit" id="submit" onclick="Submit_check()">
+        
+        </form>
+        
+        <div id="error Handling" style="text-align: center">
+            <h3 class="error" id="Name_error">*Name may not contain Numbers</h3>
+            <h3 class="error" id="Email_error">*please enter a vaild email</h3>
+            <h3 class="error" id="Number_error">*please enter a phone number</h3>
+            
+            
+        </div>
+        </div>
+        </div>
+        
+       
+        <script src="javascript.js"></script>
+                
+    </body>
+</html>

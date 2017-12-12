@@ -1,0 +1,6 @@
+Add Max 200 chars in other_Checked Area
+*Add SlideShow As background
+*add facebook and social media links at bottom
+*mobile website 
+*bubbles underneath forum to select slide
+*set focus

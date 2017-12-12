@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+    *{padding: 0px;margin: 0px;}
+    nav{height:10vh;display: flex;align-items:baseline; justify-content: space-around;background: #131313; /* Old browsers */  background: -moz-linear-gradient(top, #131313 0%, #2b2b2b 0%, #1c1c1c 0%, #111111 2%, #000000 65%, #2c2c2c 70%, #474747 75%, #666666 83%, #666666 87%, #595959 95%, #4c4c4c 100%); /* FF3.6-15 */  background: -webkit-linear-gradient(top, #131313 0%,#2b2b2b 0%,#1c1c1c 0%,#111111 2%,#000000 65%,#2c2c2c 70%,#474747 75%,#666666 83%,#666666 87%,#595959 95%,#4c4c4c 100%); /* Chrome10-25,Safari5.1-6 */  background: linear-gradient(to bottom, #131313 0%,#2b2b2b 0%,#1c1c1c 0%,#111111 2%,#000000 65%,#2c2c2c 70%,#474747 75%,#666666 83%,#666666 87%,#595959 95%,#4c4c4c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#131313', endColorstr='#4c4c4c',GradientType=0 ); /* IE6-9 */}
+    nav a{text-decoration: none;padding: 10px;border-bottom: 1px white solid;color: white;border-radius: 5px;}
+    nav a:hover{animation: IncreasePad 2s linear forwards ;}
+    #HomePage{margin-right: auto;}
+    #Login{border: none;}
+    @keyframes IncreasePad{
+        0%{background-color: #0d0d0d}
+        50%{background-color: #262626}
+        100%{background-color: #404040}
+
+    }
+
+    #Container{
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+        height: 90vh;
+        margin: auto;
+        align-items: stretch;
+
+    }
+    #Container div {
+        border: 1px black solid;
+        width: 100%;
+
+    }
+</style>
+
+<div class="Container">
+    <a href="WebSecurity.php">
+        <div class="Blocks" id="Security">
+            <h1>Web Security</h1>
+            <p>Creating websites has opened my eyes to malicious attacks that can be performed very easy if your website is not coded right</p>
+        </div>
+    </a>
+        <div>
+            <a href="Pyhon.php">
+                <h1>Python</h1>
+                <p>Python a great lauguge and a must know for all programmers or IT people in general.</p>
+            </a>
+        </div>
+        <div class="Blocks">
+            <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos explicabo labore sed voluptates. Accusamus aperiam consectetur culpa excepturi, illo natus nemo obcaecati quia quidem repellat? Blanditiis, ex, iure? Minus, reiciendis?</span><span>Adipisci consectetur consequuntur ducimus est expedita explicabo facere, fugit libero magnam maiores nam nihil odio porro quaerat, quas quia quidem sapiente sed totam voluptatem. Deserunt, fuga incidunt? Ea, fugit labore.</span></p>
+        </div>
+        <div class="Blocks">
+            <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos explicabo labore sed voluptates. Accusamus aperiam consectetur culpa excepturi, illo natus nemo obcaecati quia quidem repellat? Blanditiis, ex, iure? Minus, reiciendis?</span><span>Adipisci consectetur consequuntur ducimus est expedita explicabo facere, fugit libero magnam maiores nam nihil odio porro quaerat, quas quia quidem sapiente sed totam voluptatem. Deserunt, fuga incidunt? Ea, fugit labore.</span></p>
+        </div>
+        <div class="Blocks">
+            <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos explicabo labore sed voluptates. Accusamus aperiam consectetur culpa excepturi, illo natus nemo obcaecati quia quidem repellat? Blanditiis, ex, iure? Minus, reiciendis?</span><span>Adipisci consectetur consequuntur ducimus est expedita explicabo facere, fugit libero magnam maiores nam nihil odio porro quaerat, quas quia quidem sapiente sed totam voluptatem. Deserunt, fuga incidunt? Ea, fugit labore.</span></p>
+        </div>
+
+    </div>
+
+</body>
+</html>

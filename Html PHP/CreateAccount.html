@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title>Create Account</title>
+    <link rel="stylesheet" href="/CSS/Stylesheet.css" type="text/css">
+</head>
+<body>
+<nav>
+    <a href="index.php" id="HomePage">HomePage</a>
+    <li><a href="login.html" id="Login">Login</a></li>
+    <li><a href="#" id="Create">Create Account</a></li>
+</nav>
+<div class="Container">
+    <form action="CreateAccount.php" method="post">
+        <input id="w1" style="display: block" type="text" name="CreateAccountUsername" placeholder="Enter Your desired Username">
+        <input id="w2" style="display: block"type="text"  name="CreateAccountPassword" placeholder="Enter your password">
+        <button id="ws" style="display: block"name="CreateAccountbt">Create Account</button>
+    </form>
+</div>
+<style>
+    form{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+    }
+    #w1{width:100%;height: 50px;}
+    #w2{width:100%;height: 50px;}
+    #ws{width: 100%;height: 50px;}
+</style>
+</body>
+</html>
